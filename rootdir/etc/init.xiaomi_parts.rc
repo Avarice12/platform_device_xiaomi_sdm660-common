@@ -1,5 +1,5 @@
 on boot
-# KCal
+    # KCal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
@@ -14,3 +14,7 @@ on boot
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_val
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
+
+    # Vibrator
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
+    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
